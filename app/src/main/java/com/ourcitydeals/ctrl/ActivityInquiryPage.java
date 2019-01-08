@@ -24,11 +24,14 @@ import com.ourcitydeals.ctrl.utilities.AppConstants;
 import com.ourcitydeals.ctrl.utilities.AppDataBaseHelper;
 import com.ourcitydeals.ctrl.utilities.Utility;
 
+//this is activity inquirepage
+
 @SuppressWarnings("deprecation")
 public class ActivityInquiryPage extends Activity {
     EditText fromEmailET, toEmailET, commentET;
     MyTextView sendBtn;
     public ProgressDialog mPDialog;
+
 
     LoginDetails loginDetails;
     AppDataBaseHelper dbHelper = new AppDataBaseHelper(this);
