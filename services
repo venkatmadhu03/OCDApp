@@ -1,0 +1,44 @@
+1.Login:(post)
+http://mobilepappa.com/mobileapi/webservices/login.php
+post variables: email, password
+response:
+ {"id":"196","user_login":"mytest","user_email":"mytest@gmail.com"}
+
+2.Register:(post)
+http://mobilepappa.com/mobileapi/webservices/register.php
+post varibles: uname ,  password , email
+response:{"response":"success","uid":"201"}
+
+3. Categories:
+http://mobilepappa.com/mobileapi/webservices/categories.php
+
+4. Subcategories: (GET)
+http://mobilepappa.com/mobileapi/webservices/subcategories.php?cat_id=282
+
+
+Home products:
+http://mobilepappa.com/mobileapi/webservices/home_products.php
+
+Home_products_detail all:
+http://mobilepappa.com/mobileapi/webservices/home_view_products.php?keyword=fashion_products&start=0&limit=5
+
+
+category products:(GET)
+http://mobilepappa.com/mobileapi/webservices/category_products.php?start=10&limit=5&cat_id=231
+
+
+http://mobilepappa.com/mobileapi/webservices/pincode_check.php
+post variables-->pincode
+
+Search Result:
+http://mobilepappa.com/mobileapi/webservices/search.php?&search=food&start=1&limit=5
+
+search_atocomplete sugissions
+http://mobilepappa.com/mobileapi/webservices/autocomplete.php?keyword=food
+
+http://mobilepappa.com/mobileapi/webservices/category_products.php?cat_id=185&sub_category_id=186&start=1&limit=5
+
+
+http://mobilepappa.com/mobileapi/webservices/category_products.php?cat_id=185&sub_category_id=&start=1&limit=5
+
+http://mobilepappa.com/mobileapi/webservices/category_products.php?cat_id=&sub_category_id=186&start=1&limit=5

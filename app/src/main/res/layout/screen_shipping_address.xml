@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/headerIncludeIVID"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerIncludeIVID"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="52.5dp">
+
+            \
+            <!--//main-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/profileCLID"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/user_profile" />
+
+                <!--******FIRST NAME*******-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:padding="7dp">
+
+                    <com.ourcitydeals.ctrl.ownLibs.MyTextView
+                        android:id="@+id/name1"
+                        style="@style/headerTitle_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="First Name :"
+                        android:textColor="@color/color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/firstnameETID"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@drawable/rounded_address"
+                            android:hint="First name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="#333333" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--*******second name*******-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <com.ourcitydeals.ctrl.ownLibs.MyTextView
+                        android:id="@+id/secondname1"
+                        style="@style/headerTitle_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="Last Name :"
+                        android:textColor="@color/color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/lastNameETID"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@drawable/rounded_address"
+                            android:hint="Last name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="#333333" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--*******Email name*******-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <com.ourcitydeals.ctrl.ownLibs.MyTextView
+                        android:id="@+id/emailMYTV"
+                        style="@style/headerTitle_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="Email ID :"
+                        android:textColor="@color/color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/emailETID"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/rounded_address"
+                            android:hint="Email"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="#333333" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--******PHONE NO.********-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <com.ourcitydeals.ctrl.ownLibs.MyTextView
+                        android:id="@+id/phoneno1"
+                        style="@style/headerTitle_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="Phone No :"
+                        android:textColor="@color/color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/mobileETID"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/rounded_address"
+                            android:hint="Mobile"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            android:textColor="#333333" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--******ADDRESS Line1********-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <com.ourcitydeals.ctrl.ownLibs.MyTextView
+                        android:id="@+id/address1"
+                        style="@style/headerTitle_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="Address Line1 :"
+                        android:textColor="@color/color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/addressLine1ETID"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/rounded_address"
+                            android:gravity="center_vertical"
+                            android:hint="Delivery Address Line1"
+                            android:inputType="text"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="#333333" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--*** Address Line2-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <com.ourcitydeals.ctrl.ownLibs.MyTextView
+                        android:id="@+id/address2"
+                        style="@style/headerTitle_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="Address Line2 :"
+                        android:textColor="@color/color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/addressLine2ETID"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/rounded_address"
+                            android:gravity="center_vertical"
+                            android:hint="Delivery Address Line2"
+                            android:inputType="text"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="#333333" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--******zip********-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <com.ourcitydeals.ctrl.ownLibs.MyTextView
+                        android:id="@+id/zip1"
+                        style="@style/headerTitle_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="ZIP Code :"
+                        android:textColor="@color/color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/pinCodeCheckETID"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/rounded_address"
+                            android:hint="ZIP Code"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="#333333" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--******CITY********-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <com.ourcitydeals.ctrl.ownLibs.MyTextView
+                        android:id="@+id/city1"
+                        style="@style/headerTitle_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="City :"
+                        android:textColor="@color/color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/cityETID"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/rounded_address"
+                            android:hint="City"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="#333333" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--State-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <com.ourcitydeals.ctrl.ownLibs.MyTextView
+                        android:id="@+id/state"
+                        style="@style/headerTitle_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="State :"
+                        android:textColor="@color/color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/stateETID"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/rounded_address"
+                            android:hint="State"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="Andhra Pradesh"
+                            android:textColor="#333333" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Country-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <com.ourcitydeals.ctrl.ownLibs.MyTextView
+                        android:id="@+id/country"
+                        style="@style/headerTitle_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="Country :"
+                        android:textColor="@color/color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/countryETID"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/rounded_address"
+                            android:hint="Country"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="India"
+                            android:textColor="#333333" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.ourcitydeals.ctrl.ownLibs.MyTextView
+            android:id="@+id/continueOrderTVID"
+            style="@style/button_text"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/checkout_color"
+            android:drawableRight="@drawable/next"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="CONTINUE TO ORDER"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

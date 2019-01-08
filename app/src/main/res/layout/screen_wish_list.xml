@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/headerIncludeIVID"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerIncludeIVID"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/cart_hari"
+            android:text="Your wish list is empty!"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:text="Add items to it now?"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Add Now"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+</RelativeLayout>

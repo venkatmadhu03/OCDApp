@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/headerIncludeIVID"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerIncludeIVID"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_above="@+id/line"
+            android:paddingBottom="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/shipping"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="DELIVERY TO:"
+                        android:textColor="@color/color"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/editTVID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:background="#00000000"
+                        android:gravity="right"
+                        android:text="EDIT"
+                        android:textColor="#51a3df"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/nameTVID"
+                    style="@style/headerTitle_sub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:text="Ester Smith"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:id="@+id/addressTVID"
+                    style="@style/headerTitle_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="309, Baker Street, 390022 NY"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:id="@+id/paymentTypeTVID"
+                    style="@style/headerTitle_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Type : Cash on Delivery"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dad8d8"
+                android:gravity="bottom" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/cartListViewLVID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animationCache="false"
+                    android:cacheColorHint="#00000000"
+                    android:divider="#00000000"
+                    android:dividerHeight="2dp"
+                    android:scrollingCache="false"
+                    android:smoothScrollbar="true" />
+
+                <com.ourcitydeals.ctrl.ownLibs.ProgressWheel
+                    android:id="@+id/progress_wheel1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_horizontal"
+                    wheel:matProg_barColor="@color/colorPrimary"
+                    wheel:matProg_progressIndeterminate="true" />
+
+                <RelativeLayout
+                    android:id="@+id/cartIsEmptyRLID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@drawable/cart_hari"
+                        android:text="Your Cart is empty!"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="1dp"
+                        android:text="Add items to it now?"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <Button
+                        android:id="@+id/shopNowBtnID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorPrimary"
+                        android:elevation="4dp"
+                        android:visibility="gone"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Shop Now"
+                        android:textColor="@color/white"
+                        android:textStyle="bold|italic" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--<ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="89dp" />-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/amount"
+            android:background="#dad8d8"
+            android:elevation="1dp"
+            android:id="@+id/line"
+            android:gravity="bottom" />
+
+        <!--******TOTAL*******-->
+        <LinearLayout
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/confirmationOrderBtnID"
+            android:background="#fff"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <RelativeLayout
+                android:id="@+id/slotConfirmCard2CVID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <FrameLayout
+                    android:id="@+id/sportsCardFrame2FLID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dashed_border"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/totalLabelRLID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="vertical"
+                            android:transitionName="tNameHolder">
+
+                            <TextView
+                                android:id="@+id/totalAmountLabelTVID"
+                                style="@style/headerTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_toLeftOf="@+id/totalAmountTVID"
+                                android:gravity="center_vertical"
+                                android:layout_centerVertical="true"
+                                android:singleLine="true"
+                                android:textAllCaps="true"
+                                android:text="Total amount"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#333333" />
+
+                            <TextView
+                                android:id="@+id/totalAmountTVID"
+                                style="@style/headerTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="right|center_vertical"
+                                android:singleLine="true"
+                                android:text="0"
+                                android:textStyle="bold"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#333333" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/confirmationOrderBtnID"
+            style="@style/button_text"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:background="#009933"
+            android:drawableRight="@drawable/next"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="CONFIRM &amp; PAY"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

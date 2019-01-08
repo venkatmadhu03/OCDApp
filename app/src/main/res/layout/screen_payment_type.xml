@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/headerIncludeIVID"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerIncludeIVID"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="52.5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fbfaff"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <com.ourcitydeals.ctrl.ownLibs.MyTextView
+                        android:id="@+id/payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="8dp"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:text="PAYMENT METHOD"
+                        android:textColor="#333333"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <!--<HorizontalScrollView
+                    android:id="@+id/horizontalview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fbfaff"
+                    android:scrollbars="none">-->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/payment3"></include>
+
+                        <include layout="@layout/payment1"></include>
+
+                        <include layout="@layout/payment2"></include>
+
+                        <include layout="@layout/payment4"></include>
+
+                    </LinearLayout>
+               <!-- </HorizontalScrollView>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Cash On Delivery available!"
+                        android:textColor="#333333"
+                        android:textSize="25sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/continueOrderTVID"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <RelativeLayout
+                android:id="@+id/slotConfirmCard2CVID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <FrameLayout
+                    android:id="@+id/sportsCardFrame2FLID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dashed_border"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <RelativeLayout
+                            android:id="@+id/totalLabelRLID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="vertical"
+                            android:transitionName="tNameHolder">
+
+                            <TextView
+                                android:id="@+id/totalAmountLabelTVID"
+                                style="@style/headerTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_toLeftOf="@+id/totalAmountTVID"
+                                android:gravity="center_vertical"
+                                android:layout_centerVertical="true"
+                                android:singleLine="true"
+                                android:text="Total"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#333333" />
+
+                            <TextView
+                                android:id="@+id/totalAmountTVID"
+                                style="@style/headerTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="right|center_vertical"
+                                android:singleLine="true"
+                                android:text="0"
+                                android:textStyle="bold"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#333333" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </RelativeLayout>
+
+            <!--<com.ourcitydeals.ctrl.ownLibs.MyTextView
+                android:id="@+id/total1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TOTAL AMOUNT"
+                android:textColor="#333333"
+                android:textSize="12dp" />
+
+            <com.ourcitydeals.ctrl.ownLibs.MyTextView
+                android:id="@+id/total2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:background="#00000000"
+                android:gravity="right"
+                android:text="$ 858.00"
+                android:textColor="#333333"
+                android:textSize="16dp" />-->
+
+        </LinearLayout>
+
+        <com.ourcitydeals.ctrl.ownLibs.MyTextView
+            android:id="@+id/continueOrderTVID"
+            style="@style/button_text"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/checkout_color"
+            android:drawableRight="@drawable/next"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="CONTINUE TO CONFIRMATION"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+</RelativeLayout>

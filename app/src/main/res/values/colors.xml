@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#005D9A</color>
+    <!--<color name="colorPrimaryDark">#126094</color>-->
+    <color name="colorPrimaryDark">#14679f</color>
+    <color name="colorAccent">#428FC2</color>
+
+    <color name="selected_background">#E9EEF1</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="all_text_color">#333333</color>
+
+    <color name="regu">#CC5200</color>
+    <color name="red">#FF0000</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+
+    <color name="colorSub">#b0afaf</color>
+    <color name="colorTex">#585858</color>
+    <color name="colordevider">#64dad8d8</color>
+
+    <color name="color">#767578</color>
+    <color name="green">#009900</color>
+    <color name="green_op">#50009900</color>
+
+    <color name="checkout_color">#00ACE6</color>
+    <color name="citrus_app_background_color">#EEEEEE</color>
+    <color name="citrus_label_color">#909090</color>
+    <color name="citrus_text_color">#575757</color>
+    <color name="citrus_text_color_light">#818181</color>
+
+</resources>

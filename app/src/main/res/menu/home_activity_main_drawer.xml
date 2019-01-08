@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_1"
+            android:icon="@drawable/menu_electronics"
+            android:title="ELECTRONICS" />
+        <!--<item
+            android:id="@+id/nav_2"
+            android:icon="@drawable/menu_mobile"
+            android:title="MOBILES" />-->
+        <item
+            android:id="@+id/nav_3"
+            android:icon="@drawable/menu_fashion"
+            android:title="FASHION" />
+        <item
+            android:id="@+id/nav_4"
+            android:icon="@drawable/menu_women"
+            android:title="WOMEN" />
+
+        <item
+            android:id="@+id/nav_5"
+            android:icon="@drawable/menu_men"
+            android:title="MEN" />
+
+        <item
+            android:id="@+id/nav_6"
+            android:icon="@drawable/menu_baby"
+            android:title="BABY &amp; TOYS" />
+        <item
+            android:id="@+id/nav_7"
+            android:icon="@drawable/menu_health"
+            android:title="HEALTH &amp; BEAUTY" />
+        <item
+            android:id="@+id/nav_8"
+            android:icon="@drawable/menu_food"
+            android:title="FOOD" />
+        <item
+            android:id="@+id/nav_9"
+            android:icon="@drawable/menu_forniture"
+            android:title="HOME &amp; FURNITURE" />
+       <!-- <item
+            android:id="@+id/nav_10"
+            android:icon="@drawable/menu_footware"
+            android:title="FOOTWEAR" />
+
+        <item
+            android:id="@+id/nav_11"
+            android:icon="@drawable/menu_gifts"
+            android:title="GIFT ARTICLES" />
+
+        <item
+            android:id="@+id/nav_12"
+            android:icon="@drawable/menu_footware"
+            android:title="VEGETABLES &amp; PROVISIONS" />
+
+        <item
+            android:id="@+id/nav_13"
+            android:icon="@drawable/menu_wheel"
+            android:title="WHEELS ZONE" />
+
+        <item
+            android:id="@+id/nav_14"
+            android:icon="@drawable/menu_sports"
+            android:title="SPORTS" />
+
+        <item
+            android:id="@+id/nav_15"
+            android:icon="@drawable/menu_opticals"
+            android:title="OPTICALS" />
+
+        <item
+            android:id="@+id/nav_16"
+            android:icon="@drawable/menu_real_estate"
+            android:title="REAL ESTATE" />-->
+
+    </group>
+
+    <item android:title="Others">
+        <menu>
+            <item
+                android:id="@+id/action_cart1"
+                android:icon="@drawable/ic_shopping_cart_white_24dp"
+                android:title="Your Cart" />
+
+            <item
+                android:id="@+id/action_my_wishlist1"
+                android:icon="@drawable/ic_favorite_white_24dp"
+                android:title="Wish List" />
+
+            <item
+                android:id="@+id/action_my_account1"
+                android:icon="@drawable/ic_account_circle_white_24dp"
+                android:title="My Account" />
+
+            <item
+                android:id="@+id/action_terms"
+                android:icon="@drawable/t_c"
+                android:title="Terms &amp; Conditions" />
+        </menu>
+    </item>
+
+</menu>

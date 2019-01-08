@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!-- you should set typeface which you want to override with TypefaceUtil -->
+        <item name="android:typeface">serif</item>
+
+    </style>
+
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--<item name="android:navigationBarColor">@color/colorPrimaryDark</item>-->
+        <!-- you should set typeface which you want to override with TypefaceUtil -->
+        <item name="android:typeface">serif</item>
+    </style>
+</resources>

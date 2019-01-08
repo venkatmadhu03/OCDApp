@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#F2F2F2"
+    android:orientation="vertical"
+    android:padding="10sp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/favGINimgTitleIVID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp" />
+
+        <TextView
+            android:id="@+id/favGINTitleTVID"
+            style="@style/alert_titles"
+            android:textColor="#666"
+            android:text="Exit!" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/deleteFavTVID"
+        style="@style/alertMessagesTexts"
+        android:textColor="#333"
+        android:text="Are you sure you want to exit?"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/yesBtnID"
+            style="@style/alert_ok_yes_buttons"
+            android:background="@drawable/hari_stylished_alert"
+            android:text="YES" />
+
+        <Button
+            android:id="@+id/noBtnID"
+            style="@style/alert_button_no"
+            android:layout_toRightOf="@+id/yesBtnID"
+            android:background="@drawable/hari_stylished_alert"
+            android:text="NO" />
+    </RelativeLayout>
+
+</LinearLayout>

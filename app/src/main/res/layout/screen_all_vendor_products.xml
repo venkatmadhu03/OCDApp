@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/headerID"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerID"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/vendorImageLayoutRLID"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4dp">
+
+            <ImageView
+                android:id="@+id/vendorimage"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/placeholder_pro" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/my_grediant"
+                android:transitionName="tImage" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/vendorname"
+                        style="@style/helpDialogText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#FFF"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/location"
+                    style="@style/productNameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text=""
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/distanceTVID"
+                    style="@style/productNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="#FFF"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EEEEEE"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/gridViewRLID"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/loadingMoreRLID">
+
+                <ListView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="#00000000"
+                    android:divider="#B8B8B8"
+                    android:dividerHeight="1dp"
+                    android:listSelector="@drawable/list_selector_h_c"
+                    android:visibility="gone" />
+
+                <com.ourcitydeals.ctrl.ownLibs.ExpandableHeightGridView
+                    android:id="@+id/gridViewID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:drawSelectorOnTop="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:numColumns="2"
+                    android:stretchMode="columnWidth"/>
+
+                <com.ourcitydeals.ctrl.ownLibs.ProgressWheel
+                    android:id="@+id/progress_wheel1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    wheel:matProg_barColor="#5588FF"
+                    wheel:matProg_progressIndeterminate="true" />
+
+                <TextView
+                    android:id="@+id/noDataFoundTVID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="No Products Available!"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:drawablePadding="15dp"
+                    android:visibility="gone"
+                    android:drawableTop="@drawable/cart_hari"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#333"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/loadingMoreRLID"
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom|center_horizontal"
+                android:padding="4dp">
+
+                <com.ourcitydeals.ctrl.ownLibs.ProgressWheel
+                    android:id="@+id/progress_wheel"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_above="@+id/loadingMoreProductsTVID"
+                    android:layout_centerHorizontal="true"
+                    wheel:matProg_barColor="@color/colorPrimary"
+                    wheel:matProg_progressIndeterminate="true" />
+
+                <TextView
+                    android:id="@+id/loadingMoreProductsTVID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Loading more products...."
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

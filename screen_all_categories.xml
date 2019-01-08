@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/listsRLID"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/headerMainRLID"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerMainRLID"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/noDataTVID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="15dp"
+            android:drawableTop="@drawable/cart_hari"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="COMING SOON!"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#333"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleListRVID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animationCache="false"
+            android:background="#FFFFFF"
+            android:layout_above="@+id/loadingMoreRLID"
+            android:scrollingCache="false"
+            android:smoothScrollbar="true" />
+
+        <com.ourcitydeals.ctrl.ownLibs.ProgressWheel
+            android:id="@+id/progress_wheel1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            wheel:matProg_barColor="#5588FF"
+            wheel:matProg_progressIndeterminate="true" />
+
+        <RelativeLayout
+            android:id="@+id/loadingMoreRLID"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom|center_horizontal"
+            android:padding="4dp"
+            android:visibility="gone">
+
+            <com.ourcitydeals.ctrl.ownLibs.ProgressWheel
+                android:id="@+id/progress_wheel"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_above="@+id/loadingMoreProductsTVID"
+                android:layout_centerHorizontal="true"
+                wheel:matProg_barColor="@color/colorPrimary"
+                wheel:matProg_progressIndeterminate="true" />
+
+            <TextView
+                android:id="@+id/loadingMoreProductsTVID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp"
+                android:text="Loading more products...."
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

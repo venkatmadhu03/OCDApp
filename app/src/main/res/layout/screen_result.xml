@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/citrus_app_background_color">
+
+    <include
+        android:id="@+id/headerIncludeIVID"
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerIncludeIVID"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_vertical|center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/result_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/citrus_card_background"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/dp16">
+
+                <ImageView
+                    android:id="@+id/payment_result_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:src="@drawable/img_checkmark_green" />
+
+                <TextView
+                    android:id="@+id/payment_result_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/text_payment_success"
+                    android:textColor="@color/citrus_text_color"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/confirmedBookingTVID"
+                    style="@style/headerTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/booking_confirm"
+                    android:textColor="#808080" />
+
+                <TextView
+                    android:id="@+id/transaction_id_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/text_transaction_id"
+                    android:textColor="@color/citrus_label_color" />
+
+                <TextView
+                    android:id="@+id/orderID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ex"
+                    android:textColor="@color/citrus_text_color" />
+
+                <TextView
+                    android:id="@+id/amount_paid_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/text_amount_paid"
+                    android:textColor="@color/citrus_label_color" />
+
+                <TextView
+                    android:id="@+id/amountTVID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/citrus_text_color" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
