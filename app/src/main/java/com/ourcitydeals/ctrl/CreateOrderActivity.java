@@ -51,7 +51,7 @@ public class CreateOrderActivity extends Activity {
     ArrayList<CartListData> cartListDataList = new ArrayList<CartListData>();
     AppDataBaseHelper dataBaseHelper = new AppDataBaseHelper(CreateOrderActivity.this);
     public CartPlaceOrdersListAdapter mAdapter;
-   RelativeLayout cartIsEmptyRL;
+    RelativeLayout cartIsEmptyRL;
     ListView cartListviewLV;
     private ProgressWheel progressWheel_CENTER;
     TextView totalAmountTV;
@@ -319,12 +319,13 @@ public class CreateOrderActivity extends Activity {
     }
 
 
-    private void getCartList(String cartListUrl, RequestParams params) {
+    private void getCartList(final String cartListUrl, RequestParams params) {
         AsyncHttpClient client = new AsyncHttpClient();
         client.post(cartListUrl, params, new AsyncHttpResponseHandler() {
 
             @Override
             public void onSuccess(String response) {
+                Log.d("CartList", "onSuccess: "+cartListUrl);
                 if (response != null) {
                     System.out.println(response);
                     if (response.contains("no data found")) {

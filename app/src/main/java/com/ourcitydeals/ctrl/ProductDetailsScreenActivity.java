@@ -560,14 +560,14 @@ public class ProductDetailsScreenActivity extends AppCompatActivity implements B
         }
     }
 
-    private void addToCartServiceURL(String addToCartUrl, RequestParams params, final String cartStr) {
+    private void addToCartServiceURL(final String addToCartUrl, RequestParams params, final String cartStr) {
         AsyncHttpClient client = new AsyncHttpClient();
         client.post(addToCartUrl, params, new AsyncHttpResponseHandler() {
 
             @Override
             public void onSuccess(String response) {
                 if (response != null){
-                    Log.w("HARI-->",""+response);
+                    Log.w("HARI-->",""+response+","+addToCartUrl);
 
                     if (response.contains("already added")){
                         if (cartStr!=null && cartStr.contains("WishList")){
